@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .container.mt-4
+    h1 Admin Panel
+    .row.mt-4
+      .col-md-4
+        .card
+          .card-body.text-center
+            h5.card-title Users Management
+            p.card-text View and manage all users
+            a.btn.btn-primary(href="/admin/users") Go to Users
+      .col-md-4
+        .card
+          .card-body.text-center
+            h5.card-title Posts Management
+            p.card-text View and manage all posts
+            a.btn.btn-primary(href="/admin/posts") Go to Posts

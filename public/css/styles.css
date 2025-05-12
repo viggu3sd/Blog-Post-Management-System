@@ -1,0 +1,19 @@
+body {
+    padding-top: 56px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  .badge {
+    margin-right: 5px;
+  }
+  
+  textarea {
+    min-height: 200px;
+  }

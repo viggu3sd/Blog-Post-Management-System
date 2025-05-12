@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .row.justify-content-center
+    .col-md-8
+      if post
+        h1 Edit Post
+      else
+        h1 Create New Post
+      
+      form(method="POST", action=post ? `/posts/${post._id}?_method=PUT` : "/posts")
+        .mb-3
+          label.form-label(for="title") Title
+          input.form-control(type="text", name="title", required, value=post ? post.title : '')
+        .mb-3
+          label.form-label(for="content") Content
+          textarea.form-control(name="content", rows="10", required)= post ? post.content : ''
+        .mb-3
+          label.form-label(for="tags") Tags (comma separated)
+          input.form-control(
+            type="text", 
+            name="tags", 
+            value=post && post.tags ? post.tags.join(', ') : '',
+            placeholder="e.g., technology, programming, webdev"
+          )
+        button.btn.btn-primary(type="submit")= post ? 'Update Post' : 'Create Post'
+        a.btn.btn-outline-secondary.ms-2(href="/") Cancel

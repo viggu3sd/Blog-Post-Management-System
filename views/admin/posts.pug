@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  .container
+    h1.mb-4 All Posts
+    table.table.table-striped
+      thead
+        tr
+          th Title
+          th Author
+          th Created
+          th Actions
+      tbody
+        each post in posts
+          tr
+            td= post.title
+            td= post.createdBy.username
+            td= post.createdAt.toLocaleDateString()
+            td
+              a.btn.btn-sm.btn-outline-primary.me-2(href=`/posts/${post._id}`) View
+              form.d-inline(method="POST", action=`/admin/posts/${post._id}?_method=DELETE`)
+                button.btn.btn-sm.btn-outline-danger(type="submit") Delete

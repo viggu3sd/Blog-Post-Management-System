@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .container.mt-5
+    .alert.alert-danger
+      h1= error.status || 500
+      p= message
+    if error.stack && process.env.NODE_ENV === 'development'
+      pre.mt-4= error.stack

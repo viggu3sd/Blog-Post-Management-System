@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .container
+    if showCreateForm
+      .row.mb-4
+        .col-md-8.mx-auto
+          .card
+            .card-body
+              h4.card-title Create New Post
+              form(method="POST", action="/posts")
+                .mb-3
+                  input.form-control(type="text", name="title", placeholder="Title", required)
+                .mb-3
+                  textarea.form-control(name="content", rows="5", placeholder="Content", required)
+                .mb-3
+                  input.form-control(type="text", name="tags", placeholder="Tags (comma separated)")
+                button.btn.btn-primary(type="submit") Create Post
+
+    .row.mb-4
+      .col-md-8.mx-auto
+        form(action="/", method="GET")
+          .input-group
+            input.form-control(type="text", name="search", placeholder="Search posts...", value=search || '')
+            button.btn.btn-outline-secondary(type="submit") Search
+
+    if posts.length > 0
+      each post in posts
+        .row.mb-3
+          .col-md-8.mx-auto
+            .card
+              .card-body
+                h5.card-title= post.title
+                if post.tags && post.tags.length > 0
+                  .mb-2
+                    each tag in post.tags
+                      span.badge.bg-secondary.me-1= tag
+                p.card-text= post.content.substring(0, 150) + (post.content.length > 150 ? '...' : '')
+                .d-flex.justify-content-between.align-items-center
+                  small.text-muted Posted by #{post.createdBy.username} on #{post.createdAt.toLocaleDateString()}
+                  a.btn.btn-sm.btn-outline-primary(href=`/posts/${post._id}`) Read More
+    else
+      .row
+        .col-md-8.mx-auto
+          .alert.alert-info No posts found.
