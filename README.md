@@ -1,54 +1,36 @@
 # Blog Management System with Admin Panel
 
-![Node.js](https://img.shields.io/badge/Node.js-14.x+-green) ![Express](https://img.shields.io/badge/Express-4.x-blue) ![MongoDB](https://img.shields.io/badge/MongoDB-5.x-success)
+![Node.js](https://img.shields.io/badge/Node.js-14.x+-green) ![Express](https://img.shields.io/badge/Express-4.x-blue) ![MongoDB](https://img.shields.io/badge/MongoDB-5.x-success) ![Passport](https://img.shields.io/badge/Passport.js-Auth-yellow) ![Pug](https://img.shields.io/badge/Pug-Templating-orange)
 
-A complete blog platform with user authentication, post management, and admin controls.
+A full-featured blog platform with user authentication, post management, and administrative controls built with Node.js, Express, and MongoDB.
+
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technology Stack](#technology-stack)
+- [License](#license)
 
 ## Features
-- **User Auth**: Secure login/registration with sessions
-- **Post Management**: Create/edit/delete posts with tags
-- **Admin Panel**: Manage users/posts (view/delete any content)
-- **Search**: Find posts by keywords/tags
+- **User Authentication System**
+  - Secure registration and login with password hashing
+  - Session management with MongoDB storage
+  - Protected routes using Passport.js middleware
 
-## Quick Start
-1. Clone repo & install dependencies:
+- **Blog Post Management**
+  - Create, read, update, and delete blog posts
+  - Tag-based categorization system
+  - Full-text search functionality across posts
+
+- **Admin Control Panel**
+  - View all registered users and their roles
+  - Manage all blog posts (view/edit/delete any post)
+  - Special admin-only routes and interface
+
+## Installation
+1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/blog-system.git
-cd blog-system
-npm install
-Create .env file:
-
-env
-DB_URI=mongodb://localhost:27017/blogdb
-SESSION_SECRET=your-secret-key
-PORT=3000
-Start server:
-npm start
-Access http://localhost:3000
-
-Key Files
-app.js - Main application setup
-
-models/ - User & Post schemas
-
-controllers/ - Auth/Post/Admin logic
-
-views/ - Pug templates
-
-routes/ - All application routes
-
-Admin Access
-Register with username: admin
-
-Access /admin after login
-
-Manage all users/posts
-
-Tech Stack
-Backend: Node.js + Express + MongoDB
-
-Auth: Passport.js + Bcrypt
-
-Frontend: Pug + Bootstrap 5
-
-Middleware: Joi validation, connect-flash
+git clone https://github.com/yourusername/blog-management-system.git
+cd blog-management-system
