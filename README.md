@@ -34,3 +34,82 @@ A full-featured blog platform with user authentication, post management, and adm
 ```bash
 git clone https://github.com/yourusername/blog-management-system.git
 cd blog-management-system
+
+Install dependencies:
+npm install
+
+Set up environment variables by creating a .env file in the root directory with:
+DB_URI=mongodb://localhost:27017/blogdb
+SESSION_SECRET=your-secret-key-here
+PORT=3000
+
+Start the development server:
+npm start
+
+Access the application at:
+http://localhost:3000
+
+## Configuration
+Database Setup
+Ensure MongoDB is running locally or update the DB_URI in .env for your connection string
+
+Admin Access
+Register with username admin to automatically get admin privileges
+
+Or manually set isAdmin: true in MongoDB for an existing user:
+db.users.updateOne({username: "admin"}, {$set: {isAdmin: true}})
+
+## Usage
+Regular User Flow
+Register at /auth/register
+
+Login at /auth/login
+
+Create new posts via "New Post" button
+
+Edit/delete your own posts
+
+Search posts by keywords or tags
+
+Admin User Flow
+Login with admin credentials
+
+Access admin panel via navbar dropdown
+
+View all users at /admin/users
+
+Manage all posts at /admin/posts
+
+Delete any post (regardless of owner)
+
+## Project Structure
+
+blog-management-system/
+├── config/
+│   └── passport.js       # Authentication configuration
+├── controllers/
+│   ├── authController.js # Auth logic
+│   ├── postController.js # Post operations
+│   └── adminController.js # Admin functions
+├── middleware/
+│   ├── auth.js           # Auth middleware
+│   └── validator.js      # Validation logic
+├── models/
+│   ├── user.js           # User model
+│   └── post.js           # Post model
+├── public/               # Static files
+│   ├── css/
+│   └── js/
+├── routes/
+│   ├── auth.js           # Auth routes
+│   ├── posts.js          # Post routes
+│   └── admin.js          # Admin routes
+├── views/
+│   ├── auth/             # Auth templates
+│   ├── posts/            # Post templates
+│   ├── admin/            # Admin templates
+│   ├── layout.pug        # Base template
+│   └── error.pug         # Error page
+├── .env.example          # Env template
+├── app.js                # Main app file
+└── package.json          # Dependencies
