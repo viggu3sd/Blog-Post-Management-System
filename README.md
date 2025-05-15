@@ -23,4 +23,32 @@ DB_URI=mongodb://localhost:27017/blogdb
 SESSION_SECRET=your-secret-key
 PORT=3000
 Start server:
+npm start
+Access http://localhost:3000
 
+Key Files
+app.js - Main application setup
+
+models/ - User & Post schemas
+
+controllers/ - Auth/Post/Admin logic
+
+views/ - Pug templates
+
+routes/ - All application routes
+
+Admin Access
+Register with username: admin
+
+Access /admin after login
+
+Manage all users/posts
+
+Tech Stack
+Backend: Node.js + Express + MongoDB
+
+Auth: Passport.js + Bcrypt
+
+Frontend: Pug + Bootstrap 5
+
+Middleware: Joi validation, connect-flash
