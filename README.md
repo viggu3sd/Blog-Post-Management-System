@@ -100,6 +100,22 @@ blog-management-system/
 
 Built with Node.js and Express.js on the backend, MongoDB and Mongoose for the database layer, Passport.js and bcrypt for authentication and hashing, connect-mongo for session persistence, and Pug + Bootstrap 5 for the frontend. It also uses Joi for validation, dotenv for environment variables, method-override for HTTP verbs, and connect-flash for flash messaging.
 
+Backend: Node.js + Express.js
+
+Database: MongoDB with Mongoose ODM
+
+Authentication: Passport.js, Bcrypt.js, express-session
+
+Frontend: Pug templates + Bootstrap 5
+
+Validation: Joi
+
+Session Storage: connect-mongo
+
+Environment Management: dotenv
+
+Others: method-override, connect-flash
+
 ## License
 
 This project is licensed under the MIT License.
