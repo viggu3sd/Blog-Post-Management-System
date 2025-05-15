@@ -56,7 +56,7 @@ http://localhost:3000
 
 Ensure MongoDB is running locally or modify `DB_URI` to connect to your own database. To enable admin privileges, register with the username `admin` or manually set admin access by running the following in MongoDB:
 
-```javascript
+
 db.users.updateOne({ username: "admin" }, { $set: { isAdmin: true } })
 
 ## Usage
