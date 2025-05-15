@@ -68,33 +68,32 @@ For admin users: login as an admin, access the admin panel via the navbar, view 
 ## Project Structure
 blog-management-system/
 ├── config/
-│ └── passport.js
+│   └── passport.js          # Authentication configuration
 ├── controllers/
-│ ├── authController.js
-│ ├── postController.js
-│ └── adminController.js
+│   ├── authController.js    # Auth logic
+│   ├── postController.js    # Post operations
+│   └── adminController.js   # Admin functions
 ├── middleware/
-│ ├── auth.js
-│ └── validator.js
+│   ├── auth.js              # Auth middleware
+│   └── validator.js         # Validation logic
 ├── models/
-│ ├── user.js
-│ └── post.js
-├── public/
-│ ├── css/
-│ └── js/
+│   ├── user.js              # User model
+│   └── post.js              # Post model
+├── public/                  # Static files (CSS, JS)
 ├── routes/
-│ ├── auth.js
-│ ├── posts.js
-│ └── admin.js
+│   ├── auth.js              # Auth routes
+│   ├── posts.js             # Post routes
+│   └── admin.js             # Admin routes
 ├── views/
-│ ├── auth/
-│ ├── posts/
-│ ├── admin/
-│ ├── layout.pug
-│ └── error.pug
-├── .env.example
-├── app.js
-└── package.json
+│   ├── auth/                # Auth templates
+│   ├── posts/               # Post templates
+│   ├── admin/               # Admin templates
+│   ├── layout.pug           # Base layout
+│   └── error.pug            # Error page
+├── .env.example             # Environment variable template
+├── app.js                   # Main application entry
+└── package.json             # Project metadata and dependencies
+
 
 
 ## Technology Stack
