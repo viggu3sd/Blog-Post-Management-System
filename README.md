@@ -33,7 +33,7 @@ A full-featured blog platform with user authentication, post management, and adm
 ## Installation
 
 1. Clone the repository:
-```bash
+
 git clone https://github.com/yourusername/blog-management-system.git
 cd blog-management-system
 
@@ -51,10 +51,61 @@ npm start
 5.Open your browser and go to:
 http://localhost:3000
 
+
 ## Configuration
 
 Ensure MongoDB is running locally or modify `DB_URI` to connect to your own database. To enable admin privileges, register with the username `admin` or manually set admin access by running the following in MongoDB:
 
 ```javascript
 db.users.updateOne({ username: "admin" }, { $set: { isAdmin: true } })
+
+## Usage
+
+For regular users: register at `/auth/register`, login at `/auth/login`, create new posts using the "New Post" option, edit or delete your own posts, and search posts using keywords or tags.
+
+For admin users: login as an admin, access the admin panel via the navbar, view all users at `/admin/users`, manage all posts at `/admin/posts`, and delete any post regardless of ownership.
+
+## Project Structure
+blog-management-system/
+├── config/
+│ └── passport.js
+├── controllers/
+│ ├── authController.js
+│ ├── postController.js
+│ └── adminController.js
+├── middleware/
+│ ├── auth.js
+│ └── validator.js
+├── models/
+│ ├── user.js
+│ └── post.js
+├── public/
+│ ├── css/
+│ └── js/
+├── routes/
+│ ├── auth.js
+│ ├── posts.js
+│ └── admin.js
+├── views/
+│ ├── auth/
+│ ├── posts/
+│ ├── admin/
+│ ├── layout.pug
+│ └── error.pug
+├── .env.example
+├── app.js
+└── package.json
+
+
+## Technology Stack
+
+Built with Node.js and Express.js on the backend, MongoDB and Mongoose for the database layer, Passport.js and bcrypt for authentication and hashing, connect-mongo for session persistence, and Pug + Bootstrap 5 for the frontend. It also uses Joi for validation, dotenv for environment variables, method-override for HTTP verbs, and connect-flash for flash messaging.
+
+## License
+
+This project is licensed under the MIT License.
+
+
+
+
 
