@@ -14,41 +14,45 @@ A full-featured blog platform with user authentication, post management, and adm
 - [License](#license)
 
 ## Features
-- **User Authentication System**
-  - Secure registration and login with password hashing
-  - Session management with MongoDB storage
-  - Protected routes using Passport.js middleware
 
-- **Blog Post Management**
-  - Create, read, update, and delete blog posts
-  - Tag-based categorization system
-  - Full-text search functionality across posts
+### User Authentication System
+- Secure registration and login with password hashing
+- Session management with MongoDB storage
+- Protected routes using Passport.js middleware
 
-- **Admin Control Panel**
-  - View all registered users and their roles
-  - Manage all blog posts (view/edit/delete any post)
-  - Special admin-only routes and interface
+### Blog Post Management
+- Create, read, update, and delete blog posts
+- Tag-based categorization system
+- Full-text search functionality across posts
+
+### Admin Control Panel
+- View all registered users and their roles
+- Manage all blog posts (view/edit/delete any post)
+- Special admin-only routes and interface
 
 ## Installation
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/blog-management-system.git
 cd blog-management-system
-
 Install dependencies:
-npm install
 
+bash
+npm install
 Set up environment variables by creating a .env file in the root directory with:
+
+env
 DB_URI=mongodb://localhost:27017/blogdb
 SESSION_SECRET=your-secret-key-here
 PORT=3000
-
 Start the development server:
+
+bash
 npm start
-
 Access the application at:
-http://localhost:3000
 
+http://localhost:3000
 ## Configuration
 Database Setup
 Ensure MongoDB is running locally or update the DB_URI in .env for your connection string
@@ -57,9 +61,10 @@ Admin Access
 Register with username admin to automatically get admin privileges
 
 Or manually set isAdmin: true in MongoDB for an existing user:
-db.users.updateOne({username: "admin"}, {$set: {isAdmin: true}})
 
-## Usage
+javascript
+db.users.updateOne({username: "admin"}, {$set: {isAdmin: true}})
+Usage
 Regular User Flow
 Register at /auth/register
 
@@ -82,8 +87,7 @@ Manage all posts at /admin/posts
 
 Delete any post (regardless of owner)
 
-## Project Structure
-
+Project Structure
 blog-management-system/
 ├── config/
 │   └── passport.js       # Authentication configuration
@@ -113,7 +117,6 @@ blog-management-system/
 ├── .env.example          # Env template
 ├── app.js                # Main app file
 └── package.json          # Dependencies
-
 Technology Stack
 Backend: Node.js + Express.js
 
