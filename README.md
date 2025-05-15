@@ -113,3 +113,21 @@ blog-management-system/
 ├── .env.example          # Env template
 ├── app.js                # Main app file
 └── package.json          # Dependencies
+
+Technology Stack
+Backend: Node.js + Express.js
+
+Database: MongoDB with Mongoose ODM
+
+Authentication: Passport.js + Bcrypt.js + express-session
+
+Frontend: Pug templates + Bootstrap 5
+
+Validation: Joi schema validation
+
+Session Storage: connect-mongo
+
+Other: dotenv, method-override, connect-flash
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
