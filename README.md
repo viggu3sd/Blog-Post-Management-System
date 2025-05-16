@@ -9,7 +9,6 @@ A full-featured blog platform with user authentication, post management, and adm
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Technology Stack](#technology-stack)
 - [License](#license)
 
@@ -32,12 +31,11 @@ A full-featured blog platform with user authentication, post management, and adm
 
 ## Installation
 
-1. Clone the repository:
-
+1.Clone the repository:
 git clone https://github.com/yourusername/blog-management-system.git
 cd blog-management-system
 
-2.Install Dependencies
+2.Install Dependencies:
 npm install
 
 3.Create a .env file in the root directory and add the following:
