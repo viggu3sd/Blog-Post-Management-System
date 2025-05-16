@@ -63,35 +63,6 @@ For regular users: register at `/auth/register`, login at `/auth/login`, create 
 
 For admin users: login as an admin, access the admin panel via the navbar, view all users at `/admin/users`, manage all posts at `/admin/posts`, and delete any post regardless of ownership.
 
-## Project Structure
-blog-management-system/
-├── config/
-│   └── passport.js          # Authentication configuration
-├── controllers/
-│   ├── authController.js    # Auth logic
-│   ├── postController.js    # Post operations
-│   └── adminController.js   # Admin functions
-├── middleware/
-│   ├── auth.js              # Auth middleware
-│   └── validator.js         # Validation logic
-├── models/
-│   ├── user.js              # User model
-│   └── post.js              # Post model
-├── public/                  # Static files (CSS, JS)
-├── routes/
-│   ├── auth.js              # Auth routes
-│   ├── posts.js             # Post routes
-│   └── admin.js             # Admin routes
-├── views/
-│   ├── auth/                # Auth templates
-│   ├── posts/               # Post templates
-│   ├── admin/               # Admin templates
-│   ├── layout.pug           # Base layout
-│   └── error.pug            # Error page
-├── .env.example             # Environment variable template
-├── app.js                   # Main application entry
-└── package.json             # Project metadata and dependencies
-
 
 
 ## Technology Stack
