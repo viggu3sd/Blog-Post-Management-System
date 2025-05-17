@@ -1,4 +1,4 @@
-##This file is for Configurations of the Blog post management system.
+##This file is for Configurations of the Blog Post Management System.
 
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
