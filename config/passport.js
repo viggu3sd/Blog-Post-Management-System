@@ -1,3 +1,5 @@
+##This file is for Configurations of the Blog post management system.
+
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
