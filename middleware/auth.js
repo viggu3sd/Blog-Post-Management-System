@@ -1,3 +1,5 @@
+##middleware auth.js
+
 const Post = require('../models/post');
 
 exports.isAuthenticated = (req, res, next) => {
