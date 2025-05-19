@@ -1,3 +1,5 @@
+##middleware Validator
+
 const { registerSchema, loginSchema, postSchema } = require('../validators');
 
 const validate = (schema) => (req, res, next) => {
